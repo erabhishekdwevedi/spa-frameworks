@@ -1,4 +1,4 @@
-# README
+# ANGULAR TUTORIALS
 
 ## BASICS
 
@@ -28,6 +28,8 @@ ng build
 ```
 ng generate component component-name
 ng g c component-name
+
+ng g c components/component-name   // this will create src/app/components/
 ```
 
 5. Generate Other Units from Angular
@@ -52,4 +54,45 @@ npm install bootstrap --save
               "src/styles.scss"
             ]
 ```
-3.
+If it doesn't reflect, build app again !
+
+## Add Route
+
+1. Add header or nav component
+'''
+ng g c routing/nav
+
+'''
+
+2. Add HTML to nav component
+
+```
+<header>
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/about">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+```
+
+3. Add nav component to app.component.html
+```
+<app-nav><app-nav>
+```
+
+4. Update app-routing.module.ts
+
+```
+import {AboutComponent} from './components/dashboard/dashboard.component';
+
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'about', component: AboutComponent }
+];
+
+```

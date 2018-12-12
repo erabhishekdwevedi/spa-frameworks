@@ -1,4 +1,6 @@
-#README
+# README
+
+## BASICS
 
 1. Create a new app
 
@@ -33,3 +35,21 @@ ng g c component-name
 ```
 ng generate directive|pipe|service|class|guard|interface|enum|module  name
 ```
+
+## Add bootstrap to project
+
+1. Install Bootstrap
+
+```
+npm install bootstrap --save
+```
+
+2. Add bootstrap to style section of angular.json
+
+```
+"styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.scss"
+            ]
+```
+3.

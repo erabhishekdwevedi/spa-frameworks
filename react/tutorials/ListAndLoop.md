@@ -36,14 +36,21 @@ import './Teaser.css';
 class Teaser extends Component {
   render() {
     return (
-      <div class="cmp-teaser-wrapper">
-          <div class="cmp-teaser-card-description">
-                <ul>
-                  {this.props.list.map(function(name, index){
-                    return <li key={ index }>{name}</li>;
-                  })}
-                </ul>
-            </div>
+      <div>
+                    <h3> List without Key </h3>
+                        <ul>
+                            {this.props.list.map(function (data) {
+                                return <li>{data}</li>;
+                            })}
+                        </ul>
+                        
+                        <h3> List with Key </h3>
+              
+                          <ul>
+                            {this.props.list.map(function (name, index) {
+                                return <li key={index}>{name}</li>;
+                            })}
+                        </ul>
     </div>
     );
   }

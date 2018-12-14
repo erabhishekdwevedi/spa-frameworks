@@ -7,6 +7,8 @@
 
 ### Passing props or values to a Component
 
+In this case, we have *Hero component* which accepts heading and description , we will access this Hero component in Page Component and pass required heading and description from Page Component itself.
+
 * Hero Image Component
 ```
 import React, { Component } from 'react';
@@ -33,7 +35,7 @@ export default Hero;
 import React, { Component } from 'react';
 import Hero from '../../components/hero/Hero';
 
-class About extends Component {
+class Page extends Component {
   render() {
 
     const headingText = "Welcome";
@@ -52,7 +54,7 @@ class About extends Component {
   }
 }
 
-export default About;
+export default Page;
 
 ```
 

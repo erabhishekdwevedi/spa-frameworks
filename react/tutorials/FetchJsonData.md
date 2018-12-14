@@ -33,7 +33,7 @@ class Test extends Component {
                 <ul>
                     {this.state.info.map(function (data, index) {
                         return(
-                        <li>{data.id} {data.name}</li> 
+                        <li>{data.id} > {data.name}</li> 
                         ) 
                     })}
                 </ul>
